@@ -7,7 +7,7 @@ Zennへ投稿される記事を管理するレポジトリです。
 
 ## 概要 (Overview)
 
-このリポジトリは、[Zenn](https://zenn.dev/mtk0328) で公開している記事や本のコンテンツを管理するためのものです。
+このリポジトリは、[私のZenn](https://zenn.dev/mtk0328) で公開している記事や本のコンテンツを管理するためのものです。
 [Zenn CLI](https://zenn.dev/zenn/articles/zenn-cli-guide) を利用して、ローカル環境で執筆・プレビューを行い、このリポジトリの`main`ブランチにプッシュすることで自動的にZenn.devにコンテンツがデプロイ（公開・更新）されます。
 
 
