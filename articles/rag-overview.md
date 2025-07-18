@@ -1,5 +1,5 @@
 ---
-title: "RAGについて（未定）"
+title: "RAG（検索拡張生成）とは？仕組みからメリット、活用例までやさしく解説"
 emoji: "🧠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "LLM", "機械学習", "自然言語処理", "RAG"]
