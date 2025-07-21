@@ -3,7 +3,7 @@ title: "RAG（検索拡張生成）とは？仕組みからメリット、活用
 emoji: "🧠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "LLM", "機械学習", "自然言語処理", "RAG"]
-published: false
+published: true
 ---
 
 初めまして！株式会社 HIBARI の中野と申します。これからの取り組みとしてテックブログを書き始めることにしました。よろしくお願いします！
