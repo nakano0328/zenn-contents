@@ -4,6 +4,7 @@ emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["python", "github", "githubactions", "自動化", "個人開発"]
 published: true
+publication_name: "hibari_inc"
 ---
 
 こんにちは！株式会社 HIBARI の中野と申します。

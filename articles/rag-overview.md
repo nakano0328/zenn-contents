@@ -4,6 +4,7 @@ emoji: "🧠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "LLM", "機械学習", "自然言語処理", "RAG"]
 published: true
+publication_name: "hibari_inc"
 ---
 
 初めまして！株式会社 HIBARI の中野と申します。これからの取り組みとしてテックブログを書き始めることにしました。よろしくお願いします！
