@@ -2,32 +2,31 @@
 title: "Geminiを使ってずんだもんと会話してみた"
 emoji: "🫛"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["python","AI","gemini","voicevox"]
+topics: ["python", "AI", "gemini", "voicevox"]
 published: true
-published_at: 2025-08-02 13:00 
 publication_name: "hibari_inc"
 ---
 
 こんにちは！株式会社 HIBARI の中野と申します。
 
-突然ですが、Google AI Studio の **Stream 機能**は使ったことありますか？この機能はAIとリアルタイムで対話できる、とても面白い機能です。ただ、AIの音声がgoogle側が用意したもの数種類しかなく、自由に変更できないのが少し残念な点でした。
+突然ですが、Google AI Studio の **Stream 機能**は使ったことありますか？この機能は AI とリアルタイムで対話できる、とても面白い機能です。ただ、AI の音声が google 側が用意したもの数種類しかなく、自由に変更できないのが少し残念な点でした。
 
 「それなら、自分の好きなキャラクターと話せるようにすればもっと面白いのでは？」
 
 なので今回は、ずんだもんとリアルタイムで会話できる簡単なシステムを開発してみました！
 
-▼ GitHubはこちら ▼
+▼ GitHub はこちら ▼
 https://github.com/nakano0328/realtime-zunda
-
 
 # このシステムでできること
 
 今回作ったシステムは、マイクに向かって話しかけるだけで、ずんだもんがリアルタイムで応答してくれます。
 
 # 主な機能
+
 - マイクからの声をテキストに変換します。
-- Google AI StudioのGemini APIが、ずんだもんのキャラクターになりきって返事を考えます。
-- VOICEVOXが、生成されたテキストをずんだもんの声で読み上げます。
+- Google AI Studio の Gemini API が、ずんだもんのキャラクターになりきって返事を考えます。
+- VOICEVOX が、生成されたテキストをずんだもんの声で読み上げます。
 
 以上の処理を連続的に行うことで、途切れることのない会話体験を実現します。
 「さようなら」や「バイバイ」と言うと、会話を終了してくれる機能もつけました。
@@ -38,11 +37,11 @@ https://github.com/nakano0328/realtime-zunda
 
 ## 1.音声入力(`speech_recognition`,`pyaudio`)
 
-まず、マイクから入力された音声をpyaudioで受け取ります。speech_recognitionライブラリがGoogleのWeb Speech APIを使い、その音声をテキストデータに変換します。
+まず、マイクから入力された音声を pyaudio で受け取ります。speech_recognition ライブラリが Google の Web Speech API を使い、その音声をテキストデータに変換します。
 
 ## 2.応答生成(`google-generativeai`)
 
-テキスト化された音声は、**Gemini**に送られます。この時にテキストと同時に、ずんだもんの**キャラクター設定**を送っています。これにより、Geminiの生成した文章がずんだもんっぽくなります。
+テキスト化された音声は、**Gemini**に送られます。この時にテキストと同時に、ずんだもんの**キャラクター設定**を送っています。これにより、Gemini の生成した文章がずんだもんっぽくなります。
 
 ```py
 # main.pyより抜粋
@@ -60,7 +59,7 @@ ZUNDAMON_PROMPT = """
 
 ## 3.音声合成(`requets`,VOICEVOX)
 
-Geminiが生成したずんだもんの返答を、ローカルで起動しているVOICEVOXを用いてテキストを音声にします。
+Gemini が生成したずんだもんの返答を、ローカルで起動している VOICEVOX を用いてテキストを音声にします。
 
 ## 4.音声生成(`pydub`)
 
@@ -74,7 +73,7 @@ Geminiが生成したずんだもんの返答を、ローカルで起動して�
 
 ## ソフトウェア
 
-- Python (3.9以上 推奨)
+- Python (3.9 以上 推奨)
 - VOICEVOX
 
 ## ライブラリ
@@ -86,7 +85,7 @@ Geminiが生成したずんだもんの返答を、ローカルで起動して�
 - `pydub`
 - `python-dotenv`
 
-## APIキー
+## API キー
 
 - Google AI Studio の API キー
 
@@ -103,7 +102,7 @@ realtime-zunda/
 
 # セットアップ方法
 
-このシステムは**簡単**で**無料**なので、皆さんのPCでも動かせます。ぜひずんだもんと対話してみてください。
+このシステムは**簡単**で**無料**なので、皆さんの PC でも動かせます。ぜひずんだもんと対話してみてください。
 
 ## 1. リポジトリのクローン
 
@@ -114,9 +113,9 @@ git clone https://github.com/your-username/realtime-zunda.git
 cd realtime-zunda
 ```
 
-## 2.APIキーの設定
+## 2.API キーの設定
 
-1. [Google AI Studio](https://aistudio.google.com/)でAPIキーを取得します。
+1. [Google AI Studio](https://aistudio.google.com/)で API キーを取得します。
 2. プロジェクトのルートディレクトリに`.env`ファイルを作成します。
 3. `.env`ファイルに以下の内容を追加します。
 
@@ -124,26 +123,27 @@ cd realtime-zunda
 GOOGLE_API_KEY=your_actual_api_key_here #ここを書き換える
 ```
 
-ここで、`your_actual_api_key_here`の部分に`1.`で取得したAPIキーを書いてください。
+ここで、`your_actual_api_key_here`の部分に`1.`で取得した API キーを書いてください。
 
-**注意**: APIキーを流出しないように気をつけてください。
+**注意**: API キーを流出しないように気をつけてください。
 
 ## 3.依存関係のインストール
 
 以下のコマンドを実行し、ライブラリをインストールします。
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. VOICEVOXのセットアップ
+## 4. VOICEVOX のセットアップ
 
-VOICEVOXを起動してください。
+VOICEVOX を起動してください。
 
-VOICEVOXを持っていない場合は、[VOICEVOX公式サイト](https://voicevox.hiroshiba.jp/)からソフトをインストールしてください。
+VOICEVOX を持っていない場合は、[VOICEVOX 公式サイト](https://voicevox.hiroshiba.jp/)からソフトをインストールしてください。
 
 ## 5. プログラムの実行
 
-VOICEVOXを起動した状態で、ターミナルで以下のコマンドを実行します。
+VOICEVOX を起動した状態で、ターミナルで以下のコマンドを実行します。
 
 ```bash
 python main.py
@@ -153,7 +153,7 @@ python main.py
 
 # まとめ
 
-今回は、VOICEVOXとGoogle AI Studio、VOICEVOXを使って、ずんだもんとリアルタイムで会話するシステムを開発しました。音声認識、生成AI、音声合成という3つの技術を組み合わせることで、キャラクターとの対話を実現できました。
+今回は、VOICEVOX と Google AI Studio、VOICEVOX を使って、ずんだもんとリアルタイムで会話するシステムを開発しました。音声認識、生成 AI、音声合成という 3 つの技術を組み合わせることで、キャラクターとの対話を実現できました。
 
 ソースコードは[GitHub](https://github.com/nakano0328/realtime-zunda?tab=readme-ov-file)で公開しているので、興味のある方はぜひ改造して遊んでみてください。
 皆さんも、好きなキャラクターと話せる自分だけのアプリを作ってみてはいかがでしょうか？
