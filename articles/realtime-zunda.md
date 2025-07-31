@@ -1,6 +1,6 @@
 ---
 title: "Geminiを使ってずんだもんと会話してみた"
-emoji: "🫛"
+emoji: "🌿"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["python", "AI", "gemini", "voicevox"]
 published: true
