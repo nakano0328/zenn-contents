@@ -109,7 +109,7 @@ realtime-zunda/
 以下のコマンドを実行し、リポジトリをクローンし、ディレクトリを移動します。
 
 ```bash
-git clone https://github.com/your-username/realtime-zunda.git
+git clone https://github.com/nakano0328/realtime-zunda.git
 cd realtime-zunda
 ```
 
@@ -155,7 +155,7 @@ python main.py
 
 今回は、VOICEVOX と Google AI Studio、VOICEVOX を使って、ずんだもんとリアルタイムで会話するシステムを開発しました。音声認識、生成 AI、音声合成という 3 つの技術を組み合わせることで、キャラクターとの対話を実現できました。
 
-ソースコードは[GitHub](https://github.com/nakano0328/realtime-zunda?tab=readme-ov-file)で公開しているので、興味のある方はぜひ改造して遊んでみてください。
+ソースコードは[GitHub](https://github.com/nakano0328/realtime-zunda)で公開しているので、興味のある方はぜひ改造して遊んでみてください。
 皆さんも、好きなキャラクターと話せる自分だけのアプリを作ってみてはいかがでしょうか？
 
 最後まで読んでいただき、ありがとうございましたのだ！
