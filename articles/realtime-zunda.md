@@ -123,7 +123,7 @@ cd realtime-zunda
 GOOGLE_API_KEY=your_actual_api_key_here #ここを書き換える
 ```
 
-ここで、`your_actual_api_key_here`の部分に`1.`で取得した API キーを書いてください。
+ここで、`your_actual_api_key_here`の部分に取得した API キーを書いてください。
 
 **注意**: API キーを流出しないように気をつけてください。
 
