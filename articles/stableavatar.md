@@ -4,6 +4,7 @@ emoji: "🎬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ai","生成ai","論文解説","動画生成ai"]
 published: true
+publication_name: "hibari_inc"
 ---
 
 こんにちは！株式会社 HIBARI の中野と申します。
