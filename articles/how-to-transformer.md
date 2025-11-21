@@ -7,6 +7,8 @@ published: true
 publication_name: "hibari_inc"
 ---
 
+こんにちは！株式会社 HIBARI の中野と申します。
+
 「LLM」という言葉が一般的になり、ChatGPTやClaude、Geminiなどのサービスを日常的に触る人も増えました。
 しかし、これらの根幹にある**Transformer**について、「なんとなく分かった」で済ませている方も多いのではないでしょうか。
 
