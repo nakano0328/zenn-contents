@@ -2,8 +2,9 @@
 title: "Transformerとは？仕組みと注意点を今更ながら解説！"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
-published: false
+topics: ["ai","llm","transformer"]
+published: true
+publication_name: "hibari_inc"
 ---
 
 「LLM」という言葉が一般的になり、ChatGPTやClaude、Geminiなどのサービスを日常的に触る人も増えました。
@@ -41,7 +42,7 @@ Attentionとは、簡単に言えば、入力全体の中で「今注目すべ�
 
 Attentionは、知りたい情報のQuery(Q)と各本のKey(K)の関連度を計算し(＝内積)、関連度が高い本のValue(V)を重点的に(＝加重平均)、あなたに提示する仕組みに似ています。
 
-![Scaled Dot-Product Attention の概念図](/images/how-to-transformer/Scaled_Dot_Product_Attention.png)
+![Scaled Dot-Product Attention の概念図](/images/how-to-transformer/scaled_dot_product_Attention.png)
 図1. Scaled Dot-Product Attention の概念図
 
 この計算により、系列全体を俯瞰しながら重要な単語同士の関係性を学習できます。
@@ -57,15 +58,9 @@ Self-Attentionは、文全体を一度に見渡すため、「それ」という
 
 # Transformerの構造概要
 
-Vaswaniらの論文「Attention is All You Need」(2017)で発表されたTransformerは、
-この**Self-Attentionを多層に積み重ねた構造**を持ちます。
+Vaswaniらの論文「Attention is All You Need」(2017)で発表されたTransformerは、この**Self-Attentionを多層に積み重ねた構造**を持ちます。
 
-図2. Transformerの全体構造イメージ
-
-```
-[Encoder] → 入力系列を文脈表現に変換
-[Decoder] → その文脈から出力系列を生成
-```
+![Transformerの全体構造イメージ](/images/how-to-transformer/transformer.png)
 
 ## Encoder
 
@@ -92,17 +87,13 @@ Encoderの出力を参照しながら、自己回帰的に出力を生成しま�
 
 など、**異なる観点での依存関係を同時に学習**できます。
 
- LLMへの発展
+![Multi-Head Attention](/images/how-to-transformer/multi_head_attention.png)
+
+## LLMへの発展
 
 Transformer構造はBERT、GPT、T5などの基礎となりました。
 特にGPT系列ではDecoder部分をベースに、自己回帰型生成を採用。
 BERTはEncoder部分をベースに、文脈理解に特化したモデルとして発展しました。
-
-図3. TransformerからLLMへの派生関係
-
-```
-Transformer → BERT(Encoder型) / GPT(Decoder型)
-```
 
 # まとめ
 
@@ -111,3 +102,7 @@ Transformerの本質は「Attentionにより系列全体を一度に見渡す」
 
 今後もLLMやマルチモーダルモデルの基盤として、Transformerの理解は避けて通れません。
 改めて基本を整理しておくことで、より高次なモデル設計や推論の理解につながるでしょう。
+
+# 引用
+
+Attention Is All You Need 
