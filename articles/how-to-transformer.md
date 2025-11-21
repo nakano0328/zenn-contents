@@ -44,6 +44,7 @@ Attentionは、知りたい情報のQuery(Q)と各本のKey(K)の関連度を計
 
 ![Scaled Dot-Product Attention の概念図](/images/how-to-transformer/scaled_dot_product_Attention.png)
 図1. Scaled Dot-Product Attention の概念図
+(引用：Attention Is All You Need (Vaswani et al., 2017))
 
 この計算により、系列全体を俯瞰しながら重要な単語同士の関係性を学習できます。
 この考え方が「Self-Attention」と呼ばれるものです。
@@ -61,6 +62,8 @@ Self-Attentionは、文全体を一度に見渡すため、「それ」という
 Vaswaniらの論文「Attention is All You Need」(2017)で発表されたTransformerは、この**Self-Attentionを多層に積み重ねた構造**を持ちます。
 
 ![Transformerの全体構造イメージ](/images/how-to-transformer/transformer.png)
+図2. Transformerの全体構造イメージ
+(引用：Attention Is All You Need (Vaswani et al., 2017))
 
 ## Encoder
 
@@ -87,7 +90,9 @@ Encoderの出力を参照しながら、自己回帰的に出力を生成しま�
 
 など、**異なる観点での依存関係を同時に学習**できます。
 
-![Multi-Head Attention](/images/how-to-transformer/multi_head_attention.png)
+![Multi-Head Attentionの概要](/images/how-to-transformer/multi_head_attention.png)
+図3. Multi-Head Attentionの概要
+(引用：Attention Is All You Need (Vaswani et al., 2017))
 
 ## LLMへの発展
 
@@ -103,6 +108,6 @@ Transformerの本質は「Attentionにより系列全体を一度に見渡す」
 今後もLLMやマルチモーダルモデルの基盤として、Transformerの理解は避けて通れません。
 改めて基本を整理しておくことで、より高次なモデル設計や推論の理解につながるでしょう。
 
-# 引用
+# 参考文献
 
-Attention Is All You Need 
+A. Vaswani et al., "Attention Is All You Need," NIPS, 2017.
