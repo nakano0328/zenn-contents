@@ -152,4 +152,4 @@ Whiskで、新しいクリエイティブの扉を開いてみませんか？
 
 リンク：[Google Labs - Whisk](https://labs.google/fx/ja/tools/whisk)
 
-この記事は[自社ブログURL](https://hibari-ai.com/techblog/what-is-whisk)に投稿されたものの転載です
+この記事は[自社ブログ](https://hibari-ai.com/techblog/what-is-whisk)に投稿されたものの転載です
