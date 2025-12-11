@@ -4,7 +4,7 @@ emoji: "🧑‍🎨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["google","画像生成ai","gemini","ai"]
 published: true
-published_at: 2025-12-15 8:00
+published_at: 2025-12-15 08:00
 publication_name: "hibari_inc"
 ---
 
