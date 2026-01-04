@@ -106,7 +106,7 @@ Opalの最大の推しポイントは、「プロンプトを打った数十秒�
 また、結果についても1/2に検索したのですが、最新の事件について取り上げています。しかも存在する事件を取り上げていました。
 
 「**意識不明の重体で救急搬送されたバイクの運転手が収容先の病院で死亡　軽乗用車と大型バイクの衝突事故　静岡・御前崎市**」
-引用：https://news.yahoo.co.jp/articles/5a8c24bbb115ee6fadd6f0681e41d7a9bad64bf7
+引用：[https://news.yahoo.co.jp/articles/5a8c24bbb115ee6fadd6f0681e41d7a9bad64bf7](https://news.yahoo.co.jp/articles/5a8c24bbb115ee6fadd6f0681e41d7a9bad64bf7)
 
 ## Case 2: 画像認識 × コーディング「スクショから爆速コード生成」
 
