@@ -154,4 +154,5 @@ Opalは実験段階(Labs)のプロダクトですが、プロトタイピング�
 - [Opal](https://opal.google)
 - [Introducing Opal: describe, create, and share your AI mini-apps - Google Developers Blog](https://developers.googleblog.com/ja/introducing-opal/)
 
-この記事は[自社ブログ](https://hibari-ai.com/techblog/what-is-opal)に投稿されたものの転載です
+この記事は株式会社HIBARIのテックブログからの転載です。
+元記事はこちら：[自社ブログ](https://hibari-ai.com/techblog/what-is-opal)
