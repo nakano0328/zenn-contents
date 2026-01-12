@@ -1,5 +1,5 @@
 ---
-title: "【サーバ代0円】GitHub ActionsとPythonで、自動メール通知システムを実装してみた"
+title: "GitHub ActionsとPythonで、自動メール通知システムを実装してみた"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["python", "github", "githubactions", "自動化", "個人開発"]
