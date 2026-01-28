@@ -245,3 +245,6 @@ Claude Coworkは、特にブラウザ操作とファイル操作を伴う業務�
 - [Claude公式サイト](https://claude.ai/)
 ---
 *本記事は2026年1月時点の情報に基づいて作成しています。機能や仕様は今後変更される可能性があります。*
+
+この記事は株式会社HIBARIのテックブログからの転載です。
+元記事はこちら：[自社ブログ](https://hibari-ai.com/techblog/use-claude-cowork)
