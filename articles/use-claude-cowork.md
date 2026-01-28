@@ -3,7 +3,7 @@ title: "Claude Coworkを使ってみた：ブラウザ操作とファイル処�
 emoji: "🎉"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["claude", "ai", "automation", "業務効率化", "cowork"]
-published: false
+published: true
 publication_name: "hibari_inc"
 ---
 
