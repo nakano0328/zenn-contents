@@ -249,6 +249,13 @@ venv\Scripts\activate
 pip install requests
 ```
 
+Mac/Linux の場合はこちらです。
+
+```bash
+source venv/bin/activate
+pip install requests
+```
+
 ## Pythonコード全文
 
 ```python
