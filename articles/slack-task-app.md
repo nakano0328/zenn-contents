@@ -517,3 +517,8 @@ Web管理画面を作らなくても、
 # 参考リンク
 - Slack 
   https://slack.com/intl/ja-jp
+
+---
+
+この記事は株式会社HIBARIのテックブログからの転載です。
+元記事はこちら：[自社ブログ](https://hibari-ai.com/techblog/slack-task-app)
