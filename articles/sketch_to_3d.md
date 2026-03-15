@@ -3,7 +3,8 @@ title: "【3D AI】スケッチ1枚からゲーム用3Dキャラを作ってみ�
 emoji: "🎮"
 type: "tech"
 topics: ["3D", "AI", "Unity", "gamedev", "Hunyuan3D"]
-published: false
+published: true
+publication_name: "hibari_inc"
 ---
 
 <!-- 概要: ラフスケッチ1枚から、Hunyuan3D・TRELLIS・Tripo・Meshy・Mixamoを使ってゲームで動く3Dキャラクターを作るまでの全工程を解説。RTX 4070 Ti（12GB VRAM）での実測データ付き。 -->
