@@ -93,20 +93,20 @@ graph TD
 
 まずはこのスケッチを見てほしい。これが入力。
 
-![入力スケッチ: sword_char](/images/takeda/sketch_sword_char.png)
+![入力スケッチ: sword_char](/images/sketch_to_3d/sketch_sword_char.png)
 *こんな落書きレベルのスケッチが起点*
 
 そしてこれが3ツールの出力をUnityに並べたもの。左からHunyuan3D、TRELLIS、Tripo。
 
-![3ツール出力比較: sword_char](/images/takeda/05_Compare_sword_Original.png)
+![3ツール出力比較: sword_char](/images/sketch_to_3d/05_Compare_sword_Original.png)
 *同じスケッチから3つのAIが生成した3Dモデル。結構違う*
 
 もう1キャラ。丸いやつ。
 
-![入力スケッチ: round_char](/images/takeda/sketch_round_char.png)
+![入力スケッチ: round_char](/images/sketch_to_3d/sketch_round_char.png)
 *round_char。ゆるい感じのキャラ*
 
-![3ツール出力比較: round_char](/images/takeda/05_Compare_round_Original.png)
+![3ツール出力比較: round_char](/images/sketch_to_3d/05_Compare_round_Original.png)
 *round_charの3ツール比較。Hunyuan3D（左）が一番元のスケッチに忠実*
 
 ### 各ツールの結果
@@ -129,10 +129,10 @@ python gradio_app.py --profile 3 --turbo
 # ブラウザで localhost:7860 を開いてスケッチをアップロード
 ```
 
-![Hunyuan3D Gradio UI](/images/takeda/screenshot_gradio_result.png)
+![Hunyuan3D Gradio UI](/images/sketch_to_3d/screenshot_gradio_result.png)
 *Hunyuan3Dの生成メッシュビューアー。Appearanceモードで3Dモデルを確認できる*
 
-![Hunyuan3D出力: sword_char](/images/takeda/01_Original_hunyuan_sword_char.png)
+![Hunyuan3D出力: sword_char](/images/sketch_to_3d/01_Original_hunyuan_sword_char.png)
 *Hunyuan3Dの出力。スケッチのシルエットをよく拾ってる*
 
 **良かった点**: シルエットの再現度が3ツール中ベスト。頂点が共有されてるのでパーツ分離もしやすい。
@@ -143,7 +143,7 @@ python gradio_app.py --profile 3 --turbo
 
 Microsoftのやつ。速くて軽いけど、12GBだと512x512の解像度が上限。
 
-![TRELLIS出力: sword_char](/images/takeda/01_Original_trellis_sword_char.png)
+![TRELLIS出力: sword_char](/images/sketch_to_3d/01_Original_trellis_sword_char.png)
 *TRELLISの出力。12GB環境だと解像度が厳しく、テクスチャにブロックノイズが目立つ*
 
 **良かった点**: 生成が速い。1〜3分。出力ファイルが軽い（867KB〜1.2MB）。
@@ -154,7 +154,7 @@ Microsoftのやつ。速くて軽いけど、12GBだと512x512の解像度が上
 
 15秒で3Dモデルが出てくるのは正直すごい。API経由で自動化もしやすい。
 
-![Tripo出力: sword_char](/images/takeda/01_Original_tripo_sword_char.png)
+![Tripo出力: sword_char](/images/sketch_to_3d/01_Original_tripo_sword_char.png)
 *Tripoの出力。高密度メッシュで細かいところまで出てる*
 
 **良かった点**: 圧倒的に速い。セットアップほぼ不要。
@@ -254,26 +254,26 @@ AI生成のメッシュはテクスチャが微妙なことが多い。Meshy API
 
 Retexture後とRemesh後を並べるとこんな感じ。
 
-![Retexture後: sword_char](/images/takeda/02_Retexture_sword_char_retex.png)
+![Retexture後: sword_char](/images/sketch_to_3d/02_Retexture_sword_char_retex.png)
 *Retexture後。PBRテクスチャが乗ってゲームっぽくなった*
 
-![Remesh後: sword_char](/images/takeda/03_Remesh_sword_char_remesh.png)
+![Remesh後: sword_char](/images/sketch_to_3d/03_Remesh_sword_char_remesh.png)
 *Remesh後。ポリゴンが整理されてエンジンフレンドリーに*
 
 round_charも同じ処理を通すとこう。
 
-![Retexture後: round_char](/images/takeda/02_Retexture_round_char_retex.png)
+![Retexture後: round_char](/images/sketch_to_3d/02_Retexture_round_char_retex.png)
 *round_charのRetexture後。丸いフォルムにカラフルなテクスチャが映える*
 
-![Remesh後: round_char](/images/takeda/03_Remesh_round_char_remesh.png)
+![Remesh後: round_char](/images/sketch_to_3d/03_Remesh_round_char_remesh.png)
 *round_charのRemesh後*
 
 3ツール分を並べた比較も載せておく。
 
-![Retexture比較: round](/images/takeda/05_Compare_round_Retexture.png)
+![Retexture比較: round](/images/sketch_to_3d/05_Compare_round_Retexture.png)
 *round_char Retexture後の3ツール比較*
 
-![Remesh比較: round](/images/takeda/05_Compare_round_Remesh.png)
+![Remesh比較: round](/images/sketch_to_3d/05_Compare_round_Remesh.png)
 *round_char Remesh後の3ツール比較*
 
 Remesh後はどのツール由来でもだいたい4〜8MBに収まった。入口が違っても出口は揃う。
@@ -293,7 +293,7 @@ Meshy APIのリギング機能で、ポリゴンの塊にボーンを自動挿�
 
 **round_charは「Pose estimation failed」で失敗**。AIリギングは人型の姿勢を前提にしているので、丸いキャラだと腕も脚も検出できなかった。
 
-![リギング成功: sword_char](/images/takeda/04_Rigged_sword_char_rigged.png)
+![リギング成功: sword_char](/images/sketch_to_3d/04_Rigged_sword_char_rigged.png)
 *sword_charはリギング成功。ボーンが入ってポーズが取れるようになった。リギングAPIがメッシュを再構成するため、テクスチャはリセットされる*
 
 > 人型じゃないキャラのリギングは自動化できなかった。Blenderで手動でスケルトンを入れてウェイトペイントするしかなさそう。
@@ -345,7 +345,7 @@ Mixamoのプレビュー上では綺麗に動くのに、UnityにFBXをインポ
 
 以下はRetexture後の各ツール比較。テクスチャが乗ると印象がガラッと変わる。
 
-![Retexture比較: sword](/images/takeda/05_Compare_sword_Retexture.png)
+![Retexture比較: sword](/images/sketch_to_3d/05_Compare_sword_Retexture.png)
 *Retexture後の3ツール比較（sword_char）*
 
 
@@ -363,10 +363,10 @@ Mixamoのプレビュー上では綺麗に動くのに、UnityにFBXをインポ
 
 実際に計測したVRAM使用量がこちら。ピークで**11.6GB / 12GB**。本当にギリギリ。
 
-![GPU VRAM使用量グラフ](/images/takeda/gpu_vram_graph.png)
+![GPU VRAM使用量グラフ](/images/sketch_to_3d/gpu_vram_graph.png)
 *TRELLIS → Hunyuan3D の連続生成時のVRAM推移。赤い点線が12GBの上限ライン*
 
-![nvidia-smi実行画面](/images/takeda/screenshot_nvidia_smi.png)
+![nvidia-smi実行画面](/images/sketch_to_3d/screenshot_nvidia_smi.png)
 *生成中のnvidia-smi。6.2GB使用でGPU Utilization 100%、消費電力224W。アイドル時でもモデルがVRAMに常駐する*
 
 ### 1. メモリアロケータを変更する
