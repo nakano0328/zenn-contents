@@ -4,6 +4,8 @@ emoji: "🖌️"
 type: tech
 topics: ["javascript", "web", "gemini", "ai", "個人開発"]
 published: false
+published_at: 
+publication_name: "hibari_inc"
 ---
 
 ## はじめに
